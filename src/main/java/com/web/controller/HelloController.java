@@ -4,9 +4,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.web.annotation.Layout;
+
 @Controller
 public class HelloController {
 	
+	@Layout
 	@RequestMapping("/index")
 	public String homepage(Model model) {
 		System.out.println("index");

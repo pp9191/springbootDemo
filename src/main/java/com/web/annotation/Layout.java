@@ -19,7 +19,7 @@ public @interface Layout {
 	/**
 	 * default layout will be used
 	 */
-	String defaultLayOut = "default";
+	String defaultLayOut = "layouts/default";
 
 	String value() default defaultLayOut;
 }

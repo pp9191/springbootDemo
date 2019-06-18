@@ -5,7 +5,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div></div>
+	<div>
+		<p th:if="${session.curUser}" th:text="'Hello！, ' + ${session.curUser.account} + '!'"></p>
+		<p th:if="${session.curUser} == null">
+			<a href="/userinfo/login">登录</a>&nbsp;&nbsp;
+			<a href="/userinfo/signup">注册</a>
+		</p>
+	</div>
 	<div class="container" th:replace="${view} :: content">加载中。。。。。</div>
 </body>
 </html>

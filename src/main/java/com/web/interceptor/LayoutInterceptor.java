@@ -57,6 +57,8 @@ public class LayoutInterceptor extends HandlerInterceptorAdapter {
             Layout layout = getMethodOrTypeAnnotation(handlerMethod);
             if (layout != null) {
                 return layout.value();
+            }else {
+            	return "none";
             }
         }
         return this.defaultLayout;
