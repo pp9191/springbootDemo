@@ -6,10 +6,13 @@
 </head>
 <body>
 	<div>
-		<p th:if="${session.curUser}" th:text="'Hello！, ' + ${session.curUser.account} + '!'"></p>
+		<p th:if="${session.curUser}">
+			<span th:text="'Hello, ' + ${session.curUser.account} + '!'"></span>
+			<a th:href="@{/userinfo/logout}">退出</a>
+		</p>
 		<p th:if="${session.curUser} == null">
-			<a href="/userinfo/login">登录</a>&nbsp;&nbsp;
-			<a href="/userinfo/signup">注册</a>
+			<a th:href="@{/userinfo/login}">登录</a>&nbsp;&nbsp;
+			<a th:href="@{/userinfo/signup}">注册</a>
 		</p>
 	</div>
 	<div class="container" th:replace="${view} :: content">加载中。。。。。</div>
