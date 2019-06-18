@@ -7,7 +7,7 @@
 <body>
 	<div>
 		<p th:if="${session.curUser}">
-			<span th:text="'Hello, ' + ${session.curUser.account} + '!'"></span>
+			<span th:text="'Hello, ' + ${session.curUser.account} + '!'"></span>&nbsp;&nbsp;
 			<a th:href="@{/userinfo/logout}">退出</a>
 		</p>
 		<p th:if="${session.curUser} == null">
