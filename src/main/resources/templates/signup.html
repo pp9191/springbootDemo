@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>注册</h1>
+	<form action="#" th:action="@{signup}" th:object="${user}" method="post">
+	
+		<p>账号:<input type="text" th:field="*{account}" /> <span th:if="${#fields.hasErrors('account')}" th:errors="*{account}"></span></p>
+		<p>密码:<input type="password" th:field="*{password}" /> <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span></p>
+		
+		<p>姓名:<input type="text" th:field="*{username}"  /> <span th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></span></p>
+		<p>性别:<input type="radio" th:field="*{gender}" value="1" />男 &nbsp;&nbsp; <input type="radio" th:field="*{gender}" value="2" />女
+			<span th:if="${#fields.hasErrors('gender')}" th:errors="*{gender}"></span></p>
+		<p>手机号码:<input type="text" th:field="*{phone}" /> <span th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></span></p>
+		<p>邮箱:<input type="text" th:field="*{email}" /> <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span></p>
+		<p>住址:<input type="text" th:field="*{address}" /> <span th:if="${#fields.hasErrors('address')}" th:errors="*{address}"></span></p>
+		<p><input type="submit" value="提交" /></p>
+	
+	</form>
+</body>
+</html>

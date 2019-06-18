@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<p th:text="'Hello！, ' + ${session.curUser.account} + '!'" th:if="${session.curUser}">3333</p>
+	<div th:if="${session.curUser} == null">
+		<a href="/userinfo/login">登录</a>&nbsp;&nbsp;
+		<a href="/userinfo/signup">注册</a>
+	</div>
+</body>
+</html>
