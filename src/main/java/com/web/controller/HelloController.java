@@ -9,8 +9,9 @@ import com.web.annotation.Layout;
 @Controller
 public class HelloController {
 	
+	// 默认首页
 	@Layout
-	@RequestMapping("/index")
+	@RequestMapping({"/","/index"})
 	public String homepage(Model model) {
 		System.out.println("index");
 		

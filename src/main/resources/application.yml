@@ -10,6 +10,15 @@ spring:
       username: root
       password: 123456
       driver-class-name: org.mariadb.jdbc.Driver
+      type: com.zaxxer.hikari.HikariDataSource
+      hikari:
+         minimum-idle: 3 #最小空闲数
+         maximum-pool-size: 10
+         auto-commit: true
+         idle-timeout: 30000 #最大闲置时间
+         max-lifetime: 1800000 #最大生命时间
+         connection-timeout: 30000 #连接超时时间
+         connection-test-query: SELECT 1
    thymeleaf:
       prefix: classpath:/templates/
       suffix: .html

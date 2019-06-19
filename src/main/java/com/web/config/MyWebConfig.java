@@ -11,11 +11,11 @@ import com.web.interceptor.LayoutInterceptor;
 @Configuration
 public class MyWebConfig implements WebMvcConfigurer {	
 	
-	@Override
-	public void addViewControllers(ViewControllerRegistry registry) {
-		registry.addViewController("/").setViewName("index");
-        registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
-	}
+	/*
+	 * @Override public void addViewControllers(ViewControllerRegistry registry) {
+	 * registry.addViewController("/").setViewName("index");
+	 * registry.setOrder(Ordered.HIGHEST_PRECEDENCE); }
+	 */
 
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
