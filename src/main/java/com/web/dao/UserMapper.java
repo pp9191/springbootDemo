@@ -1,5 +1,7 @@
 package com.web.dao;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
 
 import com.web.entity.User;
@@ -21,4 +23,6 @@ public interface UserMapper {
     User login(User user);
 
 	User selectByAccount(User user);
+
+	List<User> getUsers();
 }

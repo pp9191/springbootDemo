@@ -35,6 +35,11 @@
     from userinfo
     where id = #{id,jdbcType=INTEGER}
   </select>
+  <select id="getUsers" resultMap="BaseResultMap" >
+    select 
+    <include refid="Base_Column_List" />
+    from userinfo
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from userinfo
     where id = #{id,jdbcType=INTEGER}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.w3.org/1999/xhtml" >
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
@@ -11,10 +12,10 @@
 			<a th:href="@{/userinfo/logout}">退出</a>
 		</p>
 		<p th:if="${session.curUser} == null">
-			<a th:href="@{/userinfo/login}">登录</a>&nbsp;&nbsp;
-			<a th:href="@{/userinfo/signup}">注册</a>
+			<a th:href="@{/userinfo/login}">登录</a>&nbsp;&nbsp; <a
+				th:href="@{/userinfo/signup}">注册</a>
 		</p>
-	</div>
-	<div class="container" th:replace="${view} :: content">加载中。。。。。</div>
+	</div>	
+	<div layout:fragment="content"></div>
 </body>
 </html>
